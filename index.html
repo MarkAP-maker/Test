@@ -44,11 +44,12 @@
       text-align: center;
     }
 
-    /* Full width and height styling for iframe */
+    /* Full width styling for iframe, without scrollbars */
     iframe {
       width: 100vw; /* Full viewport width */
-      height: calc(100vh - 80px); /* Full viewport height minus header and navbar */
+      height: 100%; /* Full remaining height */
       border: none;
+      display: block; /* Ensures no extra space */
     }
 
     /* Prevent scrollbars on the body */
@@ -57,24 +58,37 @@
       margin: 0;
     }
 
+    /* Style to ensure proper layout without scrollbars */
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .content-wrapper {
+      flex-grow: 1; /* This makes the iframe grow and fill the remaining space */
+      overflow: hidden; /* Prevents scrollbars */
+    }
+
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Power BI Reports</h1>
-    <p>Choose a report below to view</p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Power BI Reports</h1>
+      <p>Choose a report below to view</p>
+    </header>
 
-  <nav>
-    <a href="#report1" onclick="changeReport('report1')">Report 1</a>
-    <a href="#report2" onclick="changeReport('report2')">Report 2</a>
-    <a href="#report3" onclick="changeReport('report3')">Report 3</a>
-  </nav>
+    <nav>
+      <a href="#report1" onclick="changeReport('report1')">Report 1</a>
+      <a href="#report2" onclick="changeReport('report2')">Report 2</a>
+      <a href="#report3" onclick="changeReport('report3')">Report 3</a>
+    </nav>
 
-  <div class="content">
-    <!-- Default report iframe -->
-    <iframe id="reportFrame" src="https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9"></iframe>
+    <div class="content-wrapper">
+      <!-- Default report iframe -->
+      <iframe id="reportFrame" src="https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9"></iframe>
+    </div>
   </div>
 
   <script>
