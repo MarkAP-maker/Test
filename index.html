@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Power BI Reports</title>
   <style>
-    /* Basic styling for navbar and page */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -44,31 +43,28 @@
       text-align: center;
     }
 
-    /* Full width styling for iframe, with reduced height */
     iframe {
-      width: 100vw; /* Full viewport width */
-      height: calc(90vh - 80px); /* 90% of the remaining height minus header and navbar */
+      width: 100vw;
+      height: calc(90vh - 80px);
       border: none;
-      display: block; /* Ensures no extra space */
+      display: block;
     }
 
-    /* Prevent scrollbars on the body */
     html, body {
       height: 100%;
       margin: 0;
     }
 
-    /* Style to ensure proper layout without scrollbars */
     .container {
       display: flex;
       flex-direction: column;
       height: 100%;
     }
-    .content-wrapper {
-      flex-grow: 1; /* This makes the iframe grow and fill the remaining space */
-      overflow: hidden; /* Prevents scrollbars */
-    }
 
+    .content-wrapper {
+      flex-grow: 1;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -86,13 +82,11 @@
     </nav>
 
     <div class="content-wrapper">
-      <!-- Default report iframe -->
       <iframe id="reportFrame" src="https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9"></iframe>
     </div>
   </div>
 
   <script>
-    // Function to change the Power BI report in iframe based on navbar selection
     function changeReport(reportId) {
       var iframe = document.getElementById('reportFrame');
       var reports = {
