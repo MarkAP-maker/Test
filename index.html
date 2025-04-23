@@ -3,16 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Power BI Report</title>
+  <title>Power BI Reports</title>
+  <style>
+    /* Basic styling for navbar and page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 12px;
+      text-decoration: none;
+      margin: 5px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 80%;
+      height: 600px;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Power BI Report</h1>
-  <iframe 
-      width="100%" 
-      height="800" 
-      src="https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9" 
-      frameborder="0" 
-      allowfullscreen="true">
-  </iframe>
-</body>
-</html>
+
+  <header>
+    <h1>Power BI Reports</h1>
+    <p>Choose a report below to view</p>
+  </header>
+
+  <nav>
+    <a href="#report1" onclick="changeReport('
