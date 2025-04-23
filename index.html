@@ -44,10 +44,10 @@
       text-align: center;
     }
 
-    /* Full width styling for iframe, without scrollbars */
+    /* Full width styling for iframe, with reduced height */
     iframe {
       width: 100vw; /* Full viewport width */
-      height: 100%; /* Full remaining height */
+      height: calc(90vh - 80px); /* 90% of the remaining height minus header and navbar */
       border: none;
       display: block; /* Ensures no extra space */
     }
