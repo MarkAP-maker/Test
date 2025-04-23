@@ -82,7 +82,7 @@
     </nav>
 
     <div class="content-wrapper">
-      <iframe id="reportFrame" src="https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9"></iframe>
+      <iframe id="reportFrame" src="https://app.powerbi.com/view?r=eyJrIjoiN9"></iframe>
     </div>
   </div>
 
@@ -90,9 +90,9 @@
     function changeReport(reportId) {
       var iframe = document.getElementById('reportFrame');
       var reports = {
-        'report1': 'https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYjEzZTU4ODliIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9',
-        'report2': 'https://app.powerbi.com/view?r=eyJrIjoiZGQyYzZkZGYtZTkzOC00YzhlLWE2MmItZmYwMGMyYjczNjAwIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9',
-        'report3': 'https://app.powerbi.com/view?r=eyJrIjoiYWQwODliMjUtYzA0OS00ZDNiLTk5NjgtMzAzOTI2YmNjNzNlIiwidCI6ImFmNGRkMjdjLTA0ZGUtNGJiZC1iM2NjLTIxY2I1NjFiZTVkYiIsImMiOjF9'
+        'report1': 'https://app.powerbi.com/view?r=eyJrIjoiNDNjNjY4NWUtOTZhOS00MzBiLWE0YWEtNGIxYZTVkYiIsImMiOjF9',
+        'report2': 'https://app.powerbi.com/view?r=eyJrIjoiZGQyYzZkZGYtZTkzOC00YzhlLWE2MmItZmYwMGMmMiOjF9',
+        'report3': 'https://app.powerbi.com/view?r=eyJrIjoiYWQwODliMjUtYzA0OS00ZDNiLTk5NjgtMFiZTVkYiIsImMiOjF9'
       };
       iframe.src = reports[reportId];
     }
